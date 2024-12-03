@@ -7,7 +7,7 @@ import { RiMenu2Line } from "react-icons/ri";
 const dataButton = [
   {
     label: "Marketplace",
-    path: "/",
+    path: "/marketplace",
   },
   {
     label: "Rankings",

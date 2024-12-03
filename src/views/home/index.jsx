@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Introduce from "./components/introduce";
 import Trending from "./components/trending";
 import Creators from "./components/creators";
@@ -6,13 +6,13 @@ import Category from "./components/category";
 import Discover from "./components/discover";
 import Words from "./components/words";
 import Subscribe from "../../components/subscribe";
-import Magic from "./magic";
+import Magic from "./components/magic";
 
 
 export default function Home() {
 
   return (
-    <Fragment>
+    <body>
       <Introduce/>
       <Trending/>
       <Creators/>
@@ -21,6 +21,6 @@ export default function Home() {
       <Magic/>
       <Words/>
       <Subscribe/>
-    </Fragment>
+    </body>
   );
 }

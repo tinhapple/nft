@@ -21,7 +21,7 @@ export default function Button({
       </div>
       <p
         className={classNames(
-          "text-primary font-wordSans font-semibold text-center text-[16px]",
+          "text-primary font-wordSans font-semibold text-center text-base",
           classNameTitle
         )}
       >

@@ -29,7 +29,7 @@ export default function Wallet() {
     }
 
     return (
-        <section className='min-h-96 bg-grey grid grid-cols-2 max-sm:grid-cols-1 gap-[60px] max-md:gap-10' >
+        <body className='min-h-96 bg-grey grid grid-cols-2 max-sm:grid-cols-1 gap-[60px] max-md:gap-10' >
             <div>
                 <img src={BACKGROUNDSINGUP} alt="signup" className='w-full h-[602px] max-md:h-[530px] max-sm:h-[300px]' />
             </div>
@@ -50,9 +50,7 @@ export default function Wallet() {
                         )
                     })}
                 </div>
-
-
             </div>
-        </section>
+        </body>
     )
 }

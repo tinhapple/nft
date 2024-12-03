@@ -17,7 +17,7 @@ const data = [
         category: 'Distant Galaxy',
         price: 1.63,
         fluctuations: 0.,
-        path: '/'
+        path: '/nft'
     },
     {
         name: "Life On Edena",
@@ -26,7 +26,7 @@ const data = [
         category: 'NebulaKid',
         price: 1.63,
         fluctuations: 0.33,
-        path: '/'
+        path: '/nft'
     },
     {
         name: "Spaceone",
@@ -35,7 +35,7 @@ const data = [
         category: 'AstroFiction',
         price: 1.63,
         fluctuations: 0.33,
-        path: '/'
+        path: '/nft'
     },
 ]
 
@@ -64,6 +64,7 @@ export default function Discover() {
                 {data.map((item, index) => {
                     return (
                         <CartItem
+                            key={index}
                             onClick={() => handleNavigate(item.path)}
                             image={item.image}
                             avatar={item.avatar}

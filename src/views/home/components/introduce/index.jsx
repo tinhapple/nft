@@ -46,7 +46,7 @@ export default function Introduce() {
                 </div>
             </div>
             <div className='flex-1 md:flex md:justify-end'>
-                <div className='max-w-[510px] max-md:max-w-[330px] max-sm:max-w-full'>
+                <button onClick={() => handleNavigate('/artist')} className='max-w-[510px] max-md:max-w-[330px] max-sm:max-w-full cursor-pointer'>
                     <img
                         src={require("../../../../assets/image/image1.png")}
                         alt="image1"
@@ -63,7 +63,7 @@ export default function Introduce() {
                             <p className='text-white font-wordSans font-normal text-base leading-6'>Animakid</p>
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
 
             <div className='hidden max-sm:block'>

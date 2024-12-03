@@ -20,7 +20,7 @@ const InputController = ({
         render={({ field, fieldState: { error } }) => (
             <div className={classNames('block', containerClassName)}>
                 <div className={classNames('relative flex items-center gap-3', inputContainerClassName)}>
-                    <div className="absolute left-3">{icon}</div> {/* Icon nằm bên trong */}
+                    <div className="absolute left-3">{icon}</div> 
                     <input
                         id={name}
                         type={type}

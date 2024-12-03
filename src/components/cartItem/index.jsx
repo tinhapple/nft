@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 
 export default function CartItem({onClick,image,avatar,category,name,price,fluctuations }) {
@@ -6,7 +7,7 @@ export default function CartItem({onClick,image,avatar,category,name,price,fluct
             <img
                 src={image}
                 alt="avatar1"
-                className="w-full max-h-[240px] rounded-t-[20px]"
+                className={classNames("w-full max-h-[295px] rounded-t-[20px] max-sm:max-h-[238px] object-fill")}
             />
             <div className="bg-grey flex flex-col rounded-b-[20px] px-[18px]  pt-[20px] pb-[25px] gap-[25px]">
                 <div className='flex flex-col gap-[5px]'>

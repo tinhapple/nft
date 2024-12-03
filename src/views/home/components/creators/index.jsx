@@ -14,7 +14,6 @@ import AVATAR11 from "../../../../assets/image/Avatarcreator11.png"
 import AVATAR12 from "../../../../assets/image/Avatarcreator12.png"
 import { useNavigate } from 'react-router-dom';
 
-
 const data = [
     {
         rank: 1,
