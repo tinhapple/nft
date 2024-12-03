@@ -16,9 +16,9 @@ export default function Introduce() {
         navigate(values);
     };
     return (
-        <section className=' flex justify-between max-sm:flex-col bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-sm:gap-[30px] gap-[30px]'>
-            <div className='flex-1 flex flex-col gap-[25px] max-md:gap-5 max-sm:gap-10'>
-                <div className='max-w-[418px] gap-5 max-sm:gap-[10px]'>
+        <section className='grid grid-cols-2 max-sm:grid-cols-1 bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-sm:gap-[30px] gap-[30px]'>
+            <div className=' flex flex-col gap-[25px] max-md:gap-5 max-sm:gap-10'>
+                <div className='max-w-[418px] max-sm:max-w-full gap-5 max-sm:gap-[10px]'>
                     <h1 className=' font-semibold text-[67px] max-md:text-[36px] max-sm:text-[28px] max-sm:leading-10 leading-[73.7px] max-md:leading-10 font-wordSans text-white'>
                         Discover digital art & Collect NFTs
                     </h1>
@@ -45,15 +45,15 @@ export default function Introduce() {
                     </div>
                 </div>
             </div>
-            <div className='flex-1 md:flex md:justify-end'>
-                <div className='max-w-[510px] max-md:max-w-[330px] max-sm:max-w-full'>
+            <div className=''>
+                <button onClick={() => handleNavigate('/artist')} className='w-full max-md:max-w-[330px] max-sm:max-w-full cursor-pointer'>
                     <img
                         src={require("../../../../assets/image/image1.png")}
                         alt="image1"
                         className="w-full h-[410px] max-md:h-[230px] object-fill rounded-t-[20px]"
                     />
                     <div className='bg-grey rounded-b-[20px] p-[20px]'>
-                        <p className='text-white font-wordSans font-semibold text-[22px] leading-8'>Space Walking</p>
+                        <p className='text-white text-start font-wordSans font-semibold text-[22px] leading-8'>Space Walking</p>
                         <div className='flex items-center gap-3'>
                             <img
                                 src={require('../../../../assets/image/Avatar.png')}
@@ -63,7 +63,7 @@ export default function Introduce() {
                             <p className='text-white font-wordSans font-normal text-base leading-6'>Animakid</p>
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
 
             <div className='hidden max-sm:block'>

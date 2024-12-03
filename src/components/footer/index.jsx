@@ -8,15 +8,15 @@ import { FaInstagram } from "react-icons/fa";
 const dataButton = [
     {
         label: "Marketplace",
-        path: "/",
+        path: "/marketplace",
     },
     {
         label: "Rankings",
-        path: "/",
+        path: "/rankings",
     },
     {
         label: "Connect a wallet",
-        path: "/",
+        path: "/wallet",
     },
 ];
 

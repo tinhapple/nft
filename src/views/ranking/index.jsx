@@ -3,19 +3,20 @@ import Today from './components/today';
 import Week from './components/week';
 import Month from './components/month';
 import All from './components/all';
+import { TypeTabRank } from '../../constants/common';
 
 export default function Rankings() {
-    const [activeTab, setActiveTab] = useState('today');
+    const [activeTab, setActiveTab] = useState(TypeTabRank.TODAY);
 
     const tabs = [
-        { value: 'today', label: 'Today', smLabel: '1d' },
-        { value: 'week', label: 'This Week', smLabel: '7d' },
-        { value: 'month', label: 'This Month', smLabel: '30d' },
-        { value: 'all', label: 'All Time', smLabel: 'All' },
+        { value: TypeTabRank.TODAY, label: 'Today', smLabel: '1d' },
+        { value: TypeTabRank.WEEK, label: 'This Week', smLabel: '7d' },
+        { value: TypeTabRank.MONTH, label: 'This Month', smLabel: '30d' },
+        { value: TypeTabRank.ALL, label: 'All Time', smLabel: 'All' },
     ];
 
     return (
-        <div className='bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px]'>
+        <body className='bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px]'>
             <section className='py-[80px] max-md:py-10 max-sm:py-[30px] max-sm:gap-[10px]  flex flex-col gap-5'>
                 <h2 className='font-semibold text-[51px] max-sm:text-[28px] leading-[55px] font-wordSans text-white'>Top Creators</h2>
                 <p className='text-[22px] max-sm:text-base leading-8 font-normal text-white font-wordSans'>
@@ -37,13 +38,12 @@ export default function Rankings() {
                 ))}
             </nav>
 
-            {/* Content */}
             <div className='py-6'>
-                {activeTab === 'today' && <Today />}
-                {activeTab === 'week' && <Week />}
-                {activeTab === 'month' && <Month />}
-                {activeTab === 'all' && <All />}
+                {activeTab === TypeTabRank.TODAY && <Today />}
+                {activeTab === TypeTabRank.WEEK && <Week />}
+                {activeTab === TypeTabRank.MONTH && <Month />}
+                {activeTab === TypeTabRank.ALL && <All />}
             </div>
-        </div>
+        </body>
     );
 }
