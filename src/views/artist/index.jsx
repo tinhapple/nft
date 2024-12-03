@@ -3,6 +3,9 @@ import BACKGROUND from '../../assets/image/bg-artist.png'
 import AVATAR from '../../assets/image/avatarArtist.png'
 import InfoArtist from './components/infoArtist'
 import { TypeTabArtist } from '../../constants/common';
+import Created from './components/created';
+import Owned from './components/owned';
+import Collection from './components/collection';
 
 
 const tabs = [
@@ -18,13 +21,10 @@ export default function Artist() {
     <body>
       <section className='relative'>
         <img src={BACKGROUND} alt="background" className='w-full h-[320px] max-md:h-[280px] max-sm:h-[250px] object-cover ' />
-        <img src={AVATAR} alt="avatar" className='absolute bottom-[-60px] left-[80px] max-md:left-[50px] rounded-[20px] w-[120px] h-[120px] border-2 border-[#2B2B2B] bg-grey' />
+        <img src={AVATAR} alt="avatar" className='absolute bottom-[-60px] left-[80px] max-md:left-[50px] max-sm:left-[50%] max-sm:translate-x-[-50%] rounded-[20px] w-[120px] h-[120px] border-2 border-[#2B2B2B] bg-grey' />
       </section>
-
       <InfoArtist />
-
-
-      <nav className='flex w-full bg-black border-b-2 border-transparent'>
+      <nav className='flex w-full bg-black border-b-2 border-transparent border-t-[1px] border-t-[#3B3B3B]'>
         {tabs.map((tab) => (
           <button
             key={tab.value}
@@ -40,7 +40,12 @@ export default function Artist() {
             </div>
           </button>
         ))}
+
       </nav>
+
+      {activeTab === TypeTabArtist.CREATED && <Created />}
+      {activeTab === TypeTabArtist.COLLECTION && <Collection />}
+      {activeTab === TypeTabArtist.OWNED && <Owned />}
 
 
     </body>
