@@ -12,7 +12,7 @@ import Magic from "./components/magic";
 export default function Home() {
 
   return (
-    <body>
+    <body >
       <Introduce/>
       <Trending/>
       <Creators/>

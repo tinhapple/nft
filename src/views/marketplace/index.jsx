@@ -17,7 +17,7 @@ export default function Marketplace() {
     ];
 
     return (
-        <body className='bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] gap-10'>
+        <body className='bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] gap-10'>
             <section className='py-[80px] max-md:py-[60px] gap-[30px] flex flex-col'>
                 <div className='flex flex-col gap-[10px]'>
                     <h2 className='font-semibold text-[51px] max-sm:text-[28px] leading-[55px] font-wordSans text-white'>Browse Marketplace</h2>

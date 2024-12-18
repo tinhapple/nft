@@ -6,6 +6,7 @@ import { TypeTabArtist } from '../../constants/common';
 import Created from './components/created';
 import Owned from './components/owned';
 import Collection from './components/collection';
+import { NumberAnimatd } from '../../utils/common';
 
 
 const tabs = [
@@ -35,7 +36,7 @@ export default function Artist() {
             <div className='flex items-center justify-center gap-4'>
               <p className={`text-[22px] max-md:text-base ${activeTab === tab.value ? 'text-white' : 'text-[#858584]'}`}>{tab.label}</p>
               <div className='max-sm:hidden px-[10px] py-[5px] rounded-[20px] bg-[#858584]'>
-                <p className='text-center font-spaceMono text-white font-normal text-base leading-6' >{tab.notification}</p>
+                <p className='text-center font-spaceMono text-white font-normal text-base leading-6' ><NumberAnimatd values={tab.notification}/> </p>
               </div>
             </div>
           </button>

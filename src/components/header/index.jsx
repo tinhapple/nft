@@ -27,19 +27,19 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-black h-[100px] max-md:h-[54px] flex items-center justify-between  px-[50px] max-sm:px-[30px]">
+    <header className="bg-black h-[100px] max-md:h-[54px] flex items-center justify-between px-[50px] py-5 max-sm:px-[30px] gap-[10px]">
       <button onClick={() => handleNavigate("/")} className="flex items-center cursor-pointer">
         <img
           src={require("../../assets/image/logo.png")}
           alt="logo"
           className="w-8 h-8"
         />
-        <p className="gap-[10px] text-primary font-spaceMono text-[18px] font-semibold">
+        <h1 className="gap-[10px] text-primary font-spaceMono text-[18px] font-semibold">
           NFT Marketplace
-        </p>
+        </h1>
       </button>
 
-      <div className="hidden md:flex items-center">
+      <nav className="hidden md:flex items-center">
         {dataButton.map((item, index) => {
           return (
             <button
@@ -57,7 +57,7 @@ export default function Header() {
           classNameButton={"px-[30px] h-[60px]"}
           onClick={() => handleNavigate("/signup")}
         />
-      </div>
+      </nav>
 
       <div className="flex md:hidden items-center">
         <RiMenu2Line

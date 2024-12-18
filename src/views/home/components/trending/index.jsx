@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { motion } from "framer-motion"
+import { fadeIn } from '../../../../utils/common'
+import { useInView } from '../../../../hook/inView'
+
 import ANIMAL from '../../../../assets/image/animal.png'
 import ANIMAL1 from '../../../../assets/image/animal1.png'
 import ANIMAL2 from '../../../../assets/image/animal2.png'
@@ -45,13 +49,22 @@ const data = [
 ]
 
 export default function Trending() {
+    const sectionRef = useRef(null);
+    const inView = useInView(sectionRef)
     return (
-        <section className='flex flex-col justify-between max-sm:flex-col bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-sm:gap-[30px] gap-[60px]'>
-            <div  className='flex flex-col gap-[10px] w-[60%] max-sm:w-full'>
+        <section ref={sectionRef} className='flex flex-col justify-between max-sm:flex-col bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-sm:gap-[30px] gap-[60px]'>
+            <div className='flex flex-col gap-[10px] w-[60%] max-sm:w-full'>
                 <h2 className=' font-semibold text-[38px] max-md:text-[28px] max-sm:text-[28px] max-sm:leading-10 leading-10 font-wordSans text-white'>Trending Collection</h2>
                 <p className='text-white font-normal text-[22px] max-sm:text-base max-md:text-base font-wordSans leading-6'>Checkout our weekly updated trending collection.</p>
             </div>
-            <div className='grid gap-[30px] grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
+            <motion.div
+                variants={fadeIn("right", 0.5)}
+                initial="hidden"
+                animate={inView ? "show" : "hidden"}
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+                className='grid gap-[30px] grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'
+            >
                 {data.map((item, index) => {
                     return (
                         <div key={index} className='flex flex-col gap-[15px]'>
@@ -72,7 +85,7 @@ export default function Trending() {
                     )
                 })}
 
-            </div>
+            </motion.div>
         </section>
     )
 }

@@ -37,7 +37,7 @@ export default function Footer() {
 
 
     return (
-        <footer className="flex flex-col gap-[30px] bg-grey px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[40px]">
+        <footer className="flex flex-col gap-[30px] bg-grey px-[115px] max-md:px-[72px] max-sm:px-[30px] py-[40px]">
             <div className="flex flex-col md:flex-row md:justify-between max-md:gap-[30px]">
                 <section className="flex flex-col md:gap-[30px] max-md:gap-5">
                     <button
@@ -98,7 +98,7 @@ export default function Footer() {
                             type="email"
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email here"
-                            class="flex-1  px-[20px] h-[60px] text-base font-normal text-gray-800 focus:outline-none"
+                            class="flex-1  px-[20px] h-[60px] text-base font-normal text-[#2B2B2B] focus:outline-none"
                         />
                         <div className='bg-white'>
                             <button

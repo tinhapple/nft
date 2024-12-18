@@ -34,7 +34,7 @@ export default function Infomation() {
   };
 
   return (
-    <section className='bg-black py-10 flex flex-col gap-[30px]  px-[80px] max-md:px-[50px] max-sm:px-[30px]'>
+    <section className='bg-black py-10 flex flex-col gap-[30px]  px-[115px] max-md:px-[72px] max-sm:px-[30px]'>
       <div className='grid grid-cols-2 max-sm:grid-cols-1 '>
         <div className='flex flex-col gap-[30px]'>
           <div className='flex flex-col gap-[10px]'>
