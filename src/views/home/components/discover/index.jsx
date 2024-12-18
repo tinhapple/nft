@@ -46,13 +46,13 @@ export default function Discover() {
         navigate(values);
     };
     return (
-        <section className=' flex flex-col bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-md:gap-[40px] max-sm:gap-[40px] gap-[60px]'>
+        <section className=' flex flex-col bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-md:gap-[40px] max-sm:gap-[40px] gap-[60px]'>
             <div className='flex justify-between'>
                 <div className='flex flex-col gap-[10px] w-[60%] max-sm:w-full'>
                     <h2 className=' font-semibold text-[38px] max-md:text-[28px] max-sm:text-[28px] max-sm:leading-10 leading-10 font-wordSans text-white'>Discover More NFTs</h2>
                     <p className='text-white font-normal text-[22px] max-sm:text-base max-md:text-base font-wordSans leading-6'>Explore new trending NFTs</p>
                 </div>
-                <div className='hidden sm:block'>
+                <div className='hidden sm:block self-end'>
                     <button className='flex self-end items-center gap-3 px-[30px] h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
                         <IoEyeOutline size={20} color="#A259FF" />
                         <p className='text-base font-wordSans leading-[22px] font-semibold text-white'>See All</p>
@@ -75,6 +75,12 @@ export default function Discover() {
                         />
                     )
                 })}
+            </div>
+            <div className='hidden max-sm:block'>
+                <button className='flex items-center justify-center gap-3 w-full h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
+                    <IoEyeOutline size={20} color="#A259FF" />
+                    <p className='text-base font-wordSans leading-[22.4px] font-semibold text-white'>See All</p>
+                </button>
             </div>
 
         </section>

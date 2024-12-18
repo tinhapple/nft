@@ -102,7 +102,7 @@ export default function Created() {
         navigate('artist');
     };
     return (
-        <section className='flex flex-col bg-grey px-20 gap-[30px] py-20 max-md:px-[50px] max-sm:px-[30px]'>
+        <section className='flex flex-col bg-grey  gap-[30px] py-20 px-[115px] max-md:px-[72px] max-sm:px-[30px]'>
             <div className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[30px]'>
                 {dataArtist.map((item, index) => {
                     return (

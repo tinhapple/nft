@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { LuRocket } from "react-icons/lu";
 import AVATAR1 from "../../../../assets/image/Avatarcreator1.png"
 import AVATAR2 from "../../../../assets/image/Avatarcreator2.png"
@@ -13,6 +13,9 @@ import AVATAR10 from "../../../../assets/image/Avatarcreator10.png"
 import AVATAR11 from "../../../../assets/image/Avatarcreator11.png"
 import AVATAR12 from "../../../../assets/image/Avatarcreator12.png"
 import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion"
+import { fadeIn } from '../../../../utils/common'
+import { useInView } from '../../../../hook/inView'
 
 const data = [
     {
@@ -91,45 +94,54 @@ const data = [
 
 export default function Creators() {
     const navigate = useNavigate();
+    const sectionRef = useRef(null);
+    const inView = useInView(sectionRef)
 
     const handleNavigate = (values) => {
         navigate(values);
     };
     return (
-        <section className=' flex flex-col bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-md:gap-[40px] max-sm:gap-[40px] gap-[60px]'>
+        <section ref={sectionRef} className=' flex flex-col bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-md:gap-[40px] max-sm:gap-[40px] gap-[60px]'>
             <div className='flex justify-between'>
-                <div className='flex flex-col gap-[10px] w-[60%]'>
+                <div className='flex flex-col gap-[10px] max-w-[703px] max-md:w-[349px]'>
                     <h2 className=' font-semibold text-[38px] max-md:text-[28px] max-sm:text-[28px] max-sm:leading-10 leading-10 font-wordSans text-white'>Trending Collection</h2>
                     <p className='text-white font-normal text-[22px] max-sm:text-base max-md:text-base font-wordSans leading-6'>Checkout our weekly updated trending collection.</p>
                 </div>
-                <div className='hidden sm:block'>
-                    <button className='flex self-end items-center gap-3 px-[30px] h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
+                <div className='hidden sm:block  self-end '>
+                    <button className='flex self-end  items-center gap-3 px-[30px] h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
                         <LuRocket size={20} color="#A259FF" />
                         <p className='text-base font-wordSans leading-[22px] font-semibold text-white'>View Rankings</p>
                     </button>
                 </div>
             </div>
 
-            <div className='grid grid-cols-4 gap-[30px] max-md:grid-cols-2 max-sm:grid-cols-1'>
+            <motion.div
+                variants={fadeIn("up", 0.5)}
+                initial="hidden"
+                animate={inView ? "show" : "hidden"}
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+                className='grid grid-cols-4 gap-[30px] max-md:grid-cols-2 max-sm:grid-cols-1'
+            >
                 {data.map((item, index) => {
                     return (
                         <div key={index} className='relative w-auto h-auto flex flex-col max-md:flex-row items-center  bg-grey p-5 rounded-[20px] gap-5'>
                             <div>
-                                <img src={item.avatar} alt="avatar1" className='w-[60px] h-[60px] rounded-full object-contain' />
+                                <img src={item.avatar} alt="avatar1" className='w-[120px] h-[120px] rounded-full object-contain' />
                             </div>
-                            <div className='absolute top-4 left-4 bg-black flex items-center justify-center w-[30px] h-[30px] rounded-full'>
+                            <div className='absolute top-[20px] left-[20px] bg-black flex items-center justify-center w-[30px] h-[30px] rounded-full'>
                                 <p className='text-[#858584] text-base text-center line-clamp-6 font-normal font-spaceMono'>{item.rank}</p>
                             </div>
-                            <div className='gap-[5px]'>
-                                <p className='text-[22px] font-semibold leading-7 font-wordSans text-white text-center max-md:text-left'>{item.name}</p>
-                                <p className='text-[#858584] font-normal leading-5 text-base font-wordSans'>Total Sales: <span className='text-white font-spaceMono'>{item.total} ETH</span></p>
+                            <div className='flex flex-col gap-[5px]'>
+                                <h3 className='text-[22px] font-semibold leading-[30.8px] font-wordSans text-white text-center max-md:text-left'>{item.name}</h3>
+                                <p className='text-[#858584] font-normal leading-[22.4px] text-base font-wordSans'>Total Sales: <span className='text-white font-spaceMono'>{item.total} ETH</span></p>
                             </div>
                         </div>
                     )
                 })}
-            </div>
+            </motion.div>
             <div className='hidden max-sm:block'>
-                <button  onClick={() => handleNavigate("/")} className='flex items-center gap-3 w-full justify-center h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
+                <button onClick={() => handleNavigate("/")} className='flex items-center gap-3 w-full justify-center h-[60px] rounded-[20px] border-2 border-[#A259FF] cursor-pointer'>
                     <LuRocket size={20} color="#A259FF" />
                     <p className='text-base font-wordSans leading-[22px] font-semibold text-white'>View Rankings</p>
                 </button>

@@ -104,7 +104,7 @@ export default function Artist() {
         navigate('artist');
     };
     return (
-        <section className='py-[80px] flex flex-col bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px] max-md:py-[50px] max-sm:py-[40px] gap-[60px] '>
+        <section className='py-[80px] flex flex-col bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] max-md:py-[50px] max-sm:py-[40px] gap-[60px] '>
             <div className='flex justify-between '>
                 <h2 className=' font-semibold text-[38px] max-md:text-[28px] leading-10 font-wordSans text-white'>Discover More NFTs</h2>
                 <div className='hidden sm:block'>

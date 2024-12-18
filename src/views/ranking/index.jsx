@@ -16,7 +16,7 @@ export default function Rankings() {
     ];
 
     return (
-        <body className='bg-black px-[80px] max-md:px-[50px] max-sm:px-[30px]'>
+        <body className='bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px]'>
             <section className='py-[80px] max-md:py-10 max-sm:py-[30px] max-sm:gap-[10px]  flex flex-col gap-5'>
                 <h2 className='font-semibold text-[51px] max-sm:text-[28px] leading-[55px] font-wordSans text-white'>Top Creators</h2>
                 <p className='text-[22px] max-sm:text-base leading-8 font-normal text-white font-wordSans'>

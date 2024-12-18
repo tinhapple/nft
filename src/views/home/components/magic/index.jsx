@@ -6,7 +6,7 @@ import { IoEyeOutline } from "react-icons/io5";
 export default function Magic() {
     return (
         <section
-            className="w-full max-h-[640px] bg-gradient-to-t overflow-hidden pt-[310px] max-sm:pt-[160px]  pb-[60px] max-md:px-[50px] max-sm:px-[30px]  px-[80px]"
+            className="w-full max-h-[640px] bg-gradient-to-t overflow-hidden pt-[310px] max-sm:pt-[160px]  pb-[60px]  px-[115px] max-md:px-[72px] max-sm:px-[30px]"
             style={{
                 backgroundImage: `linear-gradient(to top, #A259FF 0%, #A259FF 10%, transparent 100%), url(${BACKGROUND})`,
                 backgroundSize: 'cover',
@@ -21,7 +21,7 @@ export default function Magic() {
                     </div>
                     <h2 className='font-semibold text-[51px] max-md:text-[38px] max-md:leading-[45px] leading-[56px] text-white font-wordSans '>Magic Mashrooms</h2>
 
-                    <button className='flex bg-white items-center justify-center w-[198px] h-[60px] py-[22px] px-[50px] gap-3 rounded-[20px]'>
+                    <button className='max-sm:hidden flex bg-white items-center justify-center w-[198px] h-[60px] py-[22px] px-[50px] gap-3 rounded-[20px]'>
                         <IoEyeOutline color='#A259FF' fontSize={20} />
                         <p className='text-[#2B2B2B] font-wordSans leading-5 text-base text-center font-semibold'>See NFT</p>
                     </button>
@@ -46,7 +46,12 @@ export default function Magic() {
 
                     </div>
                 </div>
-
+                <div className='hidden max-sm:block'>
+                    <button className=' flex bg-white items-center justify-center w-full h-[60px] gap-3 rounded-[20px]'>
+                        <IoEyeOutline color='#A259FF' fontSize={20} />
+                        <p className='text-[#2B2B2B] font-wordSans leading-[22.4px] text-base text-center font-semibold'>See NFT</p>
+                    </button>
+                </div>
             </div>
         </section>
     );

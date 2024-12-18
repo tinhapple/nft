@@ -7,6 +7,7 @@ import { BsGlobe } from "react-icons/bs";
 import Button from '../../../../components/button';
 import { FaPlus } from "react-icons/fa6";
 import { GoCopy } from "react-icons/go";
+import { NumberAnimatd } from '../../../../utils/common';
 
 export default function InfoArtist() {
   return (
@@ -30,15 +31,15 @@ export default function InfoArtist() {
           </div>
           <div className='flex justify-between gap-5 w-[310px] max-sm:w-full'>
             <div className='flex flex-col'>
-              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'>250k+</p>
+              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'><NumberAnimatd values={250}/></p>
               <p className='font-wordSans font-normal max-md:text-base max-md:leading-6 leading-9 text-[22px] text-white '>Volume</p>
             </div>
             <div className='flex flex-col'>
-              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'>250k+</p>
+              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'><NumberAnimatd values={250}/></p>
               <p className='font-wordSans font-normal max-md:text-base max-md:leading-6 leading-9 text-[22px] text-white '>Volume</p>
             </div>
             <div className='flex flex-col'>
-              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'>250k+</p>
+              <p className='text-[28px] max-md:text-[22px] max-md:leading-6 font-spaceMono leading-10 text-white font-bold'><NumberAnimatd values={250}/></p>
               <p className='font-wordSans font-normal max-md:text-base max-md:leading-6 leading-9 text-[22px] text-white '>Volume</p>
             </div>
           </div>
