@@ -103,7 +103,7 @@ export default function Creators() {
     return (
         <section ref={sectionRef} className=' flex flex-col bg-black px-[115px] max-md:px-[72px] max-sm:px-[30px] py-[80px] max-md:py-[50px] max-sm:py-[40px] max-md:gap-[40px] max-sm:gap-[40px] gap-[60px]'>
             <div className='flex justify-between'>
-                <div className='flex flex-col gap-[10px] max-w-[703px] max-md:w-[349px]'>
+                <div className='flex flex-col gap-[10px] flex-1'>
                     <h2 className=' font-semibold text-[38px] max-md:text-[28px] max-sm:text-[28px] max-sm:leading-10 leading-10 font-wordSans text-white'>Trending Collection</h2>
                     <p className='text-white font-normal text-[22px] max-sm:text-base max-md:text-base font-wordSans leading-6'>Checkout our weekly updated trending collection.</p>
                 </div>

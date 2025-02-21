@@ -84,7 +84,6 @@ export default function Trending() {
                         </div>
                     )
                 })}
-
             </motion.div>
         </section>
     )
